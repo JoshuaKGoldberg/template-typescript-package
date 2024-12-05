@@ -5,7 +5,7 @@ export const blockESLintPerfectionist = base.createBlock({
 	about: {
 		name: "ESLint Perfectionist Plugin",
 	},
-	produce() {
+	build() {
 		return {
 			addons: [
 				blockESLint({

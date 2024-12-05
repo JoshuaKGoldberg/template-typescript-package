@@ -7,7 +7,7 @@ export const blockPnpmDedupe = base.createBlock({
 	about: {
 		name: "pnpm Dedupe",
 	},
-	produce() {
+	build() {
 		return {
 			addons: [
 				blockDevelopmentDocs({

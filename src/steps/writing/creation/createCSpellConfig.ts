@@ -2,26 +2,8 @@ import { Options } from "../../../shared/types.js";
 import { formatJson } from "./formatters/formatJson.js";
 
 export async function createCSpellConfig(
-	options: Pick<
-		Options,
-		| "excludeAllContributors"
-		| "excludeLintMd"
-		| "excludeReleases"
-		| "excludeRenovate"
-		| "excludeTemplatedBy"
-		| "excludeTests"
-	>,
+	options: Pick<Options, "excludeAllContributors" | "excludeTests">,
 ) {
-	const words = [
-		"tseslint",
-		!options.excludeReleases && "apexskier",
-		!options.excludeRenovate && "automerge",
-		!options.excludeLintMd && "markdownlintignore",
-		!options.excludeTemplatedBy && "joshuakgoldberg",
-	]
-		.filter(Boolean)
-		.sort();
-
 	return await formatJson({
 		dictionaries: ["npm", "node", "typescript"],
 		ignorePaths: [
@@ -33,6 +15,6 @@ export async function createCSpellConfig(
 			"node_modules",
 			"pnpm-lock.yaml",
 		],
-		words,
+		words: ["tseslint"],
 	});
 }

@@ -5,7 +5,7 @@ export const blockESLintJSONC = base.createBlock({
 	about: {
 		name: "ESLint JSONC Plugin",
 	},
-	produce() {
+	build() {
 		return {
 			addons: [
 				blockESLint({

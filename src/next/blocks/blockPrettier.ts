@@ -26,14 +26,11 @@ export const blockPrettier = base.createBlock({
 			.default([]),
 		plugins: z.array(z.string()).default([]),
 	},
-	produce({ addons }) {
+	build({ addons }) {
 		const { ignores, overrides, plugins } = addons;
 
 		return {
 			addons: [
-				blockCSpell({
-					ignores: [".all-contributorsrc"],
-				}),
 				blockDevelopmentDocs({
 					sections: {
 						Formatting: {

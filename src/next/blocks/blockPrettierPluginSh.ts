@@ -5,7 +5,7 @@ export const blockPrettierPluginSh = base.createBlock({
 	about: {
 		name: "Prettier Plugin Sh",
 	},
-	produce() {
+	build() {
 		return {
 			addons: [
 				blockPrettier({

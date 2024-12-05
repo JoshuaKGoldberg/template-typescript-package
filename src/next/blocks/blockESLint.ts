@@ -62,7 +62,7 @@ export const blockESLint = base.createBlock({
 		rules: zExtensionRules.optional(),
 		settings: z.record(z.string(), z.unknown()).optional(),
 	},
-	produce({ addons, options }) {
+	build({ addons, options }) {
 		const { extensions, ignores, imports, rules, settings } = addons;
 
 		const importLines = [
@@ -115,9 +115,6 @@ export const blockESLint = base.createBlock({
 
 		return {
 			addons: [
-				blockCSpell({
-					words: ["tseslint"],
-				}),
 				blockDevelopmentDocs({
 					sections: {
 						Linting: {
@@ -174,11 +171,6 @@ Each should be shown in VS Code, and can be run manually on the command-line:
 					},
 				}),
 				blockVSCode({
-					addons: [
-						blockCSpell({
-							words: ["dbaeumer"],
-						}),
-					],
 					extensions: ["dbaeumer.vscode-eslint"],
 					settings: {
 						"editor.codeActionsOnSave": {

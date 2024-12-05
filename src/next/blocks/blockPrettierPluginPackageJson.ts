@@ -5,7 +5,7 @@ export const blockPrettierPluginPackageJson = base.createBlock({
 	about: {
 		name: "Prettier Plugin Package JSON",
 	},
-	produce() {
+	build() {
 		return {
 			addons: [
 				blockPrettier({

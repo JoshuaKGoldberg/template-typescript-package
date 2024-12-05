@@ -5,7 +5,7 @@ export const blockFunding = base.createBlock({
 	about: {
 		name: "Funding",
 	},
-	produce({ options }) {
+	build({ options }) {
 		return {
 			files: {
 				".github": {

@@ -5,7 +5,7 @@ export const blockESLintJSDoc = base.createBlock({
 	about: {
 		name: "ESLint JSDoc Plugin",
 	},
-	produce() {
+	build() {
 		return {
 			addons: [
 				blockESLint({

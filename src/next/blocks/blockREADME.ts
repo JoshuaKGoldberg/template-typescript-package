@@ -9,7 +9,7 @@ export const blockREADME = base.createBlock({
 	addons: {
 		notices: z.array(z.string()).default([]),
 	},
-	produce({ addons, options }) {
+	build({ addons, options }) {
 		const { notices } = addons;
 
 		return {

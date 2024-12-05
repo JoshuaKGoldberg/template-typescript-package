@@ -5,7 +5,7 @@ export const blockESLintYML = base.createBlock({
 	about: {
 		name: "ESLint YML Plugin",
 	},
-	produce() {
+	build() {
 		return {
 			addons: [
 				blockESLint({

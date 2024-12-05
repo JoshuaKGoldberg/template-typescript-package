@@ -8,7 +8,7 @@ export const blockKnip = base.createBlock({
 	about: {
 		name: "Knip",
 	},
-	produce() {
+	build() {
 		return {
 			addons: [
 				blockDevelopmentDocs({

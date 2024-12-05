@@ -5,7 +5,7 @@ export const blockMITLicense = base.createBlock({
 	about: {
 		name: "MIT License",
 	},
-	produce() {
+	build() {
 		return {
 			addons: [
 				blockPackageJson({

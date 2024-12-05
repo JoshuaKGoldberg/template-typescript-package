@@ -6,7 +6,7 @@ export const blockNvmrc = base.createBlock({
 	about: {
 		name: "Nvmrc",
 	},
-	produce({ options }) {
+	build({ options }) {
 		return {
 			addons: [
 				blockPrettier({

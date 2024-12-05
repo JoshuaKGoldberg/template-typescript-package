@@ -5,7 +5,7 @@ export const blockESLintRegexp = base.createBlock({
 	about: {
 		name: "ESLint Regexp Plugin",
 	},
-	produce() {
+	build() {
 		return {
 			addons: [
 				blockESLint({

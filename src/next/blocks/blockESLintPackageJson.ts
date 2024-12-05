@@ -5,7 +5,7 @@ export const blockESLintPackageJson = base.createBlock({
 	about: {
 		name: "ESLint package.json Plugin",
 	},
-	produce() {
+	build() {
 		return {
 			addons: [
 				blockESLint({

@@ -18,13 +18,7 @@ describe("createCSpellConfig", () => {
 					"node_modules",
 					"pnpm-lock.yaml"
 				],
-				"words": [
-					"apexskier",
-					"automerge",
-					"joshuakgoldberg",
-					"markdownlintignore",
-					"tseslint"
-				]
+				"words": ["tseslint"]
 			}
 			"
 		`);
@@ -33,10 +27,6 @@ describe("createCSpellConfig", () => {
 	it("creates an ignore file with minimal words when exclusions are enabled", async () => {
 		const actual = await createCSpellConfig({
 			excludeAllContributors: true,
-			excludeLintMd: true,
-			excludeReleases: true,
-			excludeRenovate: true,
-			excludeTemplatedBy: true,
 			excludeTests: true,
 		});
 

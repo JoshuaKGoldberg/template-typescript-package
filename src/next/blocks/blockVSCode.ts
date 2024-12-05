@@ -28,7 +28,7 @@ export const blockVSCode = base.createBlock({
 			)
 			.optional(),
 	},
-	produce({ addons, options }) {
+	build({ addons, options }) {
 		const { debuggers, extensions, settings, tasks } = addons;
 
 		return {

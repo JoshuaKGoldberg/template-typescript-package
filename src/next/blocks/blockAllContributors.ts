@@ -1,14 +1,18 @@
 import { createSoloWorkflowFile } from "../../steps/writing/creation/dotGitHub/createSoloWorkflowFile.js";
 import { base } from "../base.js";
+import { blockCSpell } from "./blockCSpell.js";
 import { blockPrettier } from "./blockPrettier.js";
 
 export const blockAllContributors = base.createBlock({
 	about: {
 		name: "AllContributors",
 	},
-	produce({ options }) {
+	build({ options }) {
 		return {
 			addons: [
+				blockCSpell({
+					ignorePaths: [".all-contributorsrc"],
+				}),
 				blockPrettier({
 					ignores: ["/.all-contributorsrc"],
 				}),

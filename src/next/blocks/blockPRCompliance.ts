@@ -5,7 +5,7 @@ export const blockPRCompliance = base.createBlock({
 	about: {
 		name: "PR Compliance",
 	},
-	produce() {
+	build() {
 		return {
 			files: {
 				".github": {

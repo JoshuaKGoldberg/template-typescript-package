@@ -81,7 +81,7 @@ export const base = createBase({
 		title: z.string(),
 		version: z.string().optional(),
 	},
-	produce({ options, take }) {
+	read({ options, take }) {
 		const allContributors = lazyValue(async () => {
 			const contributions = (await take(inputJSONFile, {
 				filePath: ".all-contributorsrc",

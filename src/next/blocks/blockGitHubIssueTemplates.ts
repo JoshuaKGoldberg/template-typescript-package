@@ -5,7 +5,7 @@ export const blockGitHubIssueTemplates = base.createBlock({
 	about: {
 		name: "GitHub Issue Templates",
 	},
-	produce({ options }) {
+	build({ options }) {
 		return {
 			files: {
 				".github": {

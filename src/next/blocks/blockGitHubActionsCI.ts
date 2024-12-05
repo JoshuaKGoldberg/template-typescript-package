@@ -30,7 +30,7 @@ export const blockGitHubActionsCI = base.createBlock({
 			)
 			.optional(),
 	},
-	produce({ addons }) {
+	build({ addons }) {
 		const { jobs } = addons;
 
 		return {

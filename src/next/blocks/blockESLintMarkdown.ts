@@ -5,7 +5,7 @@ export const blockESLintMarkdown = base.createBlock({
 	about: {
 		name: "ESLint Markdown Plugin",
 	},
-	produce() {
+	build() {
 		return {
 			addons: [
 				blockESLint({

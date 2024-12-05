@@ -10,6 +10,7 @@ export async function uninstallPackages(offline: boolean | undefined) {
 			"@clack/prompts",
 			"all-contributors-for-repository",
 			"chalk",
+			"cspell-lib",
 			"execa",
 			"get-github-auth-token",
 			"git-remote-origin-url",

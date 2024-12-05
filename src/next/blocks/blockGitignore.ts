@@ -10,7 +10,7 @@ export const blockGitignore = base.createBlock({
 	addons: {
 		ignores: z.array(z.string()).default([]),
 	},
-	produce({ addons }) {
+	build({ addons }) {
 		const { ignores } = addons;
 
 		return {

@@ -26,7 +26,7 @@ export const blockVitest = base.createBlock({
 		exclude: z.array(z.string()).default([]),
 		include: z.array(z.string()).default([]),
 	},
-	produce({ addons }) {
+	build({ addons }) {
 		const { coverage, exclude = [], include = [] } = addons;
 		const excludeText = JSON.stringify(exclude);
 		const includeText = JSON.stringify(include);
@@ -34,7 +34,7 @@ export const blockVitest = base.createBlock({
 		return {
 			addons: [
 				blockCSpell({
-					ignores: [coverage.directory],
+					ignorePaths: [coverage.directory],
 				}),
 				blockESLint({
 					extensions: [

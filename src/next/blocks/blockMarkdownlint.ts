@@ -15,14 +15,11 @@ export const blockMarkdownlint = base.createBlock({
 	addons: {
 		ignores: z.array(z.string()).default([]),
 	},
-	produce({ addons }) {
+	build({ addons }) {
 		const { ignores } = addons;
 
 		return {
 			addons: [
-				blockCSpell({
-					words: ["markdownlintignore"],
-				}),
 				blockDevelopmentDocs({
 					sections: {
 						Linting: {
@@ -56,11 +53,6 @@ export const blockMarkdownlint = base.createBlock({
 					},
 				}),
 				blockVSCode({
-					addons: [
-						blockCSpell({
-							words: ["Anson"],
-						}),
-					],
 					extensions: ["DavidAnson.vscode-markdownlint"],
 				}),
 			],

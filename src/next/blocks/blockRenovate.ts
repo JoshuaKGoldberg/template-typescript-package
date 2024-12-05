@@ -1,17 +1,11 @@
 import { base } from "../base.js";
-import { blockCSpell } from "./blockCSpell.js";
 
 export const blockRenovate = base.createBlock({
 	about: {
 		name: "Renovate",
 	},
-	produce() {
+	build() {
 		return {
-			addons: [
-				blockCSpell({
-					words: ["automerge"],
-				}),
-			],
 			files: {
 				".github": {
 					"renovate.json": JSON.stringify({

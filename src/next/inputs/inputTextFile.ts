@@ -5,7 +5,7 @@ export const inputTextFile = createInput({
 	args: {
 		filePath: z.string(),
 	},
-	async produce({ args, fs }) {
+	async run({ args, fs }) {
 		try {
 			return await fs.readFile(args.filePath);
 		} catch {

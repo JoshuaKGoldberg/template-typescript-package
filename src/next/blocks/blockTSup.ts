@@ -14,7 +14,7 @@ export const blockTSup = base.createBlock({
 	addons: {
 		entry: z.array(z.string()).default([]),
 	},
-	produce({ addons }) {
+	build({ addons }) {
 		const { entry } = addons;
 
 		return {

@@ -4,7 +4,7 @@ export const blockContributingDocs = base.createBlock({
 	about: {
 		name: "Contributing Docs",
 	},
-	produce({ options }) {
+	build({ options }) {
 		return {
 			files: {
 				".github": {

@@ -5,7 +5,7 @@ export const blockESLintNode = base.createBlock({
 	about: {
 		name: "ESLint Node Plugin",
 	},
-	produce({ options }) {
+	build({ options }) {
 		return {
 			addons: [
 				blockESLint({

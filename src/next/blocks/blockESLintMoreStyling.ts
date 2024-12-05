@@ -5,7 +5,7 @@ export const blockESLintMoreStyling = base.createBlock({
 	about: {
 		name: "ESLint More Styling",
 	},
-	produce() {
+	build() {
 		return {
 			addons: [
 				blockESLint({

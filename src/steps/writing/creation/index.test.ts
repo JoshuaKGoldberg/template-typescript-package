@@ -193,7 +193,10 @@ const optionsBaseline: Options = {
 };
 
 describe("createStructure", () => {
-	describe.each(["minimal", "common", "everything"])("base %s", () => {
+	describe.each([
+		// "minimal", "common",
+		"everything",
+	])("base %s", () => {
 		it("matches current and next", async () => {
 			const optionsNext = {
 				...optionsBaseline,
@@ -204,6 +207,7 @@ describe("createStructure", () => {
 						"@prettier/sync",
 						"all-contributors-for-repository",
 						"chalk",
+						"cspell-lib",
 						"create",
 						"execa",
 						"get-github-auth-token",

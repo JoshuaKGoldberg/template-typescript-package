@@ -11,12 +11,9 @@ export const blockTemplatedBy = base.createBlock({
 	addons: {
 		notices: z.array(z.string()).default([]),
 	},
-	produce() {
+	build() {
 		return {
 			addons: [
-				blockCSpell({
-					words: ["joshuakgoldberg"],
-				}),
 				blockREADME({
 					notices: [
 						`

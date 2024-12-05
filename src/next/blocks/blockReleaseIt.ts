@@ -7,12 +7,9 @@ export const blockReleaseIt = base.createBlock({
 	about: {
 		name: "release-it",
 	},
-	produce({ options }) {
+	build({ options }) {
 		return {
 			addons: [
-				blockCSpell({
-					words: ["apexskier"],
-				}),
 				blockPackageJson({
 					properties: {
 						publishConfig: {

@@ -67,7 +67,7 @@ export const blockDevelopmentDocs = base.createBlock({
 		hints: z.array(z.string()).default([]),
 		sections: z.record(z.string(), zSection).default({}),
 	},
-	produce({ addons, options }) {
+	build({ addons, options }) {
 		const lines = [
 			`# Development`,
 			``,

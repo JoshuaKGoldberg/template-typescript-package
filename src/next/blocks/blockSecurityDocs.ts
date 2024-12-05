@@ -4,7 +4,7 @@ export const blockSecurityDocs = base.createBlock({
 	about: {
 		name: "Security Docs",
 	},
-	produce({ options }) {
+	build({ options }) {
 		return {
 			files: {
 				".github": {

@@ -4,7 +4,7 @@ export const blockContributorCovenant = base.createBlock({
 	about: {
 		name: "Contributor Covenant",
 	},
-	produce({ options }) {
+	build({ options }) {
 		return {
 			files: {
 				".github": {

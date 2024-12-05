@@ -22,7 +22,7 @@ export const blockPackageJson = base.createBlock({
 			)
 			.default({}),
 	},
-	produce({ addons, options }) {
+	build({ addons, options }) {
 		return {
 			commands: [
 				{

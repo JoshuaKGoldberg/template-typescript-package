@@ -5,7 +5,7 @@ export const blockESLintComments = base.createBlock({
 	about: {
 		name: "ESLint Comments Plugin",
 	},
-	produce() {
+	build() {
 		return {
 			addons: [
 				blockESLint({

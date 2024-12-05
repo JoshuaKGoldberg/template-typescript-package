@@ -12,7 +12,7 @@ export const blockTypeScript = base.createBlock({
 	about: {
 		name: "TypeScript",
 	},
-	produce({ options }) {
+	build({ options }) {
 		return {
 			addons: [
 				blockDevelopmentDocs({

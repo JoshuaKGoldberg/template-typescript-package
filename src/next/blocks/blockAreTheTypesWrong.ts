@@ -5,7 +5,7 @@ export const blockAreTheTypesWrong = base.createBlock({
 	about: {
 		name: "README.md",
 	},
-	produce() {
+	build() {
 		return {
 			addons: [
 				blockGitHubActionsCI({
